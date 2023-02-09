@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ClickMechanic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private string objectName;
+    [SerializeField] private GameObject textOfObject;
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseDown()
     {
-        
+        objectName = gameObject.name;
+        Destroy(gameObject);
+        Destroy(textOfObject);
     }
 }
